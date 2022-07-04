@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Convertion</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="add_value">Add value</string>
+    <string name="from_unit">From Unit</string>
+    <string name="ml">ml</string>
+    <string name="tsp">tsp</string>
+    <string name="tbsp">tbsp</string>
+    <string name="cup">cup</string>
+    <string name="to_unit">To Unit</string>
+    <string name="convert">CONVERT</string>
+    <string name="converted_amount">Converted Amount:</string>
+</resources>

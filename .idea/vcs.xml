@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/DiceRoller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HappyBirthday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New folder/DiceRoller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New folder/HappyBirthday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New folder/TipTime" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New folder/android-basics-kotlin-lemonade-app-main" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TipTime" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/android-basics-kotlin-lemonade-app-main" vcs="Git" />
+  </component>
+</project>

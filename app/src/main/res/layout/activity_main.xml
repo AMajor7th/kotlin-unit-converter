@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/text_input"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="@string/add_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_unit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/to_unit"
+        app:layout_constraintStart_toEndOf="@id/from_unit"
+        app:layout_constraintTop_toBottomOf="@id/text_input" />
+
+    <TextView
+        android:id="@+id/from_unit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/from_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_input" />
+
+    <RadioGroup
+        android:id="@+id/from_unit_option"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_unit"
+        android:orientation="vertical"
+        android:checkedButton="@id/option_from_tsp">
+        <RadioButton
+            android:id="@+id/option_from_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml"/>
+
+        <RadioButton
+            android:id="@+id/option_from_tsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tsp"/>
+
+        <RadioButton
+            android:id="@+id/option_from_tbsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tbsp"/>
+
+        <RadioButton
+            android:id="@+id/option_from_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cup"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/to_unit_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/option_to_ml"
+        app:layout_constraintStart_toEndOf="@id/from_unit_option"
+        app:layout_constraintTop_toBottomOf="@id/from_unit"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/option_to_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml"/>
+
+        <RadioButton
+            android:id="@+id/option_to_tsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tsp"/>
+
+        <RadioButton
+            android:id="@+id/option_to_tbsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tbsp"/>
+
+        <RadioButton
+            android:id="@+id/option_to_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cup"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        app:layout_constraintTop_toBottomOf="@id/from_unit_option"/>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:text="@string/converted_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/convert_button"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
