@@ -9,5 +9,5 @@
     <string name="cup">cup</string>
     <string name="to_unit">To Unit</string>
     <string name="convert">CONVERT</string>
-    <string name="converted_amount">Converted Amount:</string>
+    <string name="converted_amount">Converted Amount: %s %s</string>
 </resources>
