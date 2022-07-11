@@ -1,7 +1,11 @@
 package com.example.convertion
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import com.example.convertion.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding.convertButton.setOnClickListener {
             convert()
         }
+        binding.textInput.setOnKeyListener{view, keyCode, _ -> handleKeyEvent(view, keyCode)}
         displayValue(0.0)
     }
 
@@ -49,5 +54,16 @@ class MainActivity : AppCompatActivity() {
         val value = binding.textInput.text.toString().toDoubleOrNull()
         if (value == null) { return 0.0 }
             else { return value }
+    }
+
+    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER) {
+            // Hide the keyboard
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
     }
 }
