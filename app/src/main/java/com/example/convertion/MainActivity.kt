@@ -1,11 +1,11 @@
 package com.example.convertion
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.convertion.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding.convertButton.setOnClickListener {
             convert()
         }
-        binding.textInput.setOnKeyListener{view, keyCode, _ -> handleKeyEvent(view, keyCode)}
+        binding.textInput.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
         displayValue(0.0)
     }
 
@@ -27,15 +27,15 @@ class MainActivity : AppCompatActivity() {
         val input = getInputValue()
         val valueInMl = when (binding.fromUnitOption.checkedRadioButtonId) {
             R.id.option_from_ml -> input
-            R.id.option_from_cup -> input*236.6
-            R.id.option_from_tsp -> input*4.929
-            else -> input*14.79
+            R.id.option_from_cup -> input * 236.6
+            R.id.option_from_tsp -> input * 4.929
+            else -> input * 14.79
         }
         val convertedValue = when (binding.toUnitOption.checkedRadioButtonId) {
             R.id.option_to_ml -> valueInMl
-            R.id.option_to_cup -> valueInMl/236.6
-            R.id.option_to_tsp -> valueInMl/4.929
-            else -> valueInMl/14.79
+            R.id.option_to_cup -> valueInMl / 236.6
+            R.id.option_to_tsp -> valueInMl / 4.929
+            else -> valueInMl / 14.79
         }
         displayValue(convertedValue)
     }
@@ -52,8 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun getInputValue(): Double {
         val value = binding.textInput.text.toString().toDoubleOrNull()
-        if (value == null) { return 0.0 }
-            else { return value }
+        if (value == null) {
+            return 0.0
+        } else {
+            return value
+        }
     }
 
     private fun handleKeyEvent(view: View, keyCode: Int): Boolean {

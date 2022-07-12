@@ -1,155 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout"
-        android:layout_width="180dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/add_value"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:inputType="numberDecimal"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:inputType="numberDecimal" />
 
-    <ImageView
-        android:id="@+id/from_unit_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/min_text_height"
-        app:srcCompat="@drawable/ic_from_unit"
-        android:importantForAccessibility="no"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        style="@style/Widget.Convertion.TextView"
-        android:id="@+id/from_unit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/from_unit"
-        app:layout_constraintStart_toEndOf="@id/from_unit_icon"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout"/>
+        <ImageView
+            android:id="@+id/from_unit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_text_height"
+            app:srcCompat="@drawable/ic_from_unit"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
 
-    <ImageView
-        android:id="@+id/to_unit_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/min_text_height"
-        app:srcCompat="@drawable/ic_to_unit"
-        android:importantForAccessibility="no"
-        app:layout_constraintStart_toEndOf="@id/from_unit_option"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout"/>
-
-    <TextView
-        style="@style/Widget.Convertion.TextView"
-        android:id="@+id/to_unit"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/to_unit"
-        app:layout_constraintStart_toEndOf="@id/to_unit_icon"
-        app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
-
-
-
-    <RadioGroup
-        android:id="@+id/from_unit_option"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/from_unit"
-        app:layout_constraintTop_toBottomOf="@id/from_unit"
-        android:orientation="vertical"
-        android:checkedButton="@id/option_from_tsp">
-        <RadioButton
-            android:id="@+id/option_from_ml"
+        <TextView
+            style="@style/Widget.Convertion.TextView"
+            android:id="@+id/from_unit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ml"/>
+            android:text="@string/from_unit"
+            app:layout_constraintStart_toEndOf="@id/from_unit_icon"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
 
-        <RadioButton
-            android:id="@+id/option_from_tsp"
+        <ImageView
+            android:id="@+id/to_unit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/min_text_height"
+            app:srcCompat="@drawable/ic_to_unit"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toEndOf="@id/from_unit_option"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
+
+        <TextView
+            style="@style/Widget.Convertion.TextView"
+            android:id="@+id/to_unit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/to_unit"
+            app:layout_constraintStart_toEndOf="@id/to_unit_icon"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
+
+
+        <RadioGroup
+            android:id="@+id/from_unit_option"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/from_unit"
+            app:layout_constraintTop_toBottomOf="@id/from_unit"
+            android:orientation="vertical"
+            android:checkedButton="@id/option_from_tsp">
+
+            <RadioButton
+                android:id="@+id/option_from_ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ml" />
+
+            <RadioButton
+                android:id="@+id/option_from_tsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsp" />
+
+            <RadioButton
+                android:id="@+id/option_from_tbsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tbsp" />
+
+            <RadioButton
+                android:id="@+id/option_from_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cup" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/to_unit_option"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tsp"/>
+            android:checkedButton="@id/option_to_ml"
+            app:layout_constraintStart_toStartOf="@id/to_unit"
+            app:layout_constraintTop_toBottomOf="@id/from_unit"
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/option_from_tbsp"
+            <RadioButton
+                android:id="@+id/option_to_ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ml" />
+
+            <RadioButton
+                android:id="@+id/option_to_tsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsp" />
+
+            <RadioButton
+                android:id="@+id/option_to_tbsp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tbsp" />
+
+            <RadioButton
+                android:id="@+id/option_to_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cup" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/convert_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/convert"
+            app:layout_constraintTop_toBottomOf="@id/from_unit_option"
+            app:layout_constraintStart_toStartOf="@id/from_unit_option"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            style="@style/Widget.Convertion.TextView"
+            android:id="@+id/result_text"
+            android:text="@string/converted_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tbsp"/>
-
-        <RadioButton
-            android:id="@+id/option_from_cup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cup"/>
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/to_unit_option"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkedButton="@id/option_to_ml"
-        app:layout_constraintStart_toStartOf="@id/to_unit"
-        app:layout_constraintTop_toBottomOf="@id/from_unit"
-        android:orientation="vertical">
-        <RadioButton
-            android:id="@+id/option_to_ml"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ml"/>
-
-        <RadioButton
-            android:id="@+id/option_to_tsp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tsp"/>
-
-        <RadioButton
-            android:id="@+id/option_to_tbsp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tbsp"/>
-
-        <RadioButton
-            android:id="@+id/option_to_cup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cup"/>
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/convert_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/convert"
-        app:layout_constraintTop_toBottomOf="@id/from_unit_option"
-        app:layout_constraintStart_toStartOf="@id/from_unit_option"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        style="@style/Widget.Convertion.TextView"
-        android:id="@+id/result_text"
-        android:text="@string/converted_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/convert_button"
-        app:layout_constraintEnd_toEndOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@id/convert_button"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
